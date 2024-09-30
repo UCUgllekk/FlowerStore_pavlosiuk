@@ -1,21 +1,24 @@
 package flower.store;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
-
-
-@Setter
+@Getter @Setter @AllArgsConstructor
 public class Flower {
-    @Getter
-    private double sepalLength;
     private FlowerColor color;
-    @Getter
+    private int sepalLenght;
     private double price;
-    @Getter
     private FlowerType flowerType;
+    
+    public String getColor(){
+        return color.ToString();
+    }
 
-    public String getColor() {
-        return color.toString();
+    public Flower(Flower flower){
+        color = flower.color;
+        sepalLenght = flower.sepalLenght;
+        price = flower.price;
+        flowerType = flower.flowerType;
     }
 }
