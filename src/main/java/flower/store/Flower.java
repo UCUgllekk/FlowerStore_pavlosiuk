@@ -15,6 +15,13 @@ public class Flower {
         return color.ToString();
     }
 
+    public Flower(){
+        color = null;
+        sepalLenght = 0;
+        price = 0;
+        flowerType = null;
+    }
+
     public Flower(Flower flower){
         color = flower.color;
         sepalLenght = flower.sepalLenght;
